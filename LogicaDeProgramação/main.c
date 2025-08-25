@@ -3,23 +3,28 @@
 
 int main()
 {
-    int contador = 1;
-    int limite = 10;
+    // O tipo de dado (char) é usado para armazenar um único caractere.
+    char nome[256];
+    char sobrenome[256];
+    int ano_nascimento;
+    int idade;
 
-    // O loop while percorre um bloco de código
-    // desde que uma condição especificada seja true
-    while(contador <= limite){
-        printf("Estamos no primeiro loop!\n");
-        if(contador == 3)
-        {
-            int contador_2 = 5;
-            while(contador_2 > 0){
-                printf("Estamos no segundo loop!\n");
-                contador_2--;
-            }
-        }
-        contador++;
-    }
+    printf("Qual seu nome?\n");
+    scanf("%s",nome);
+
+    printf("\nShow de bola, %s... Qual sua idade?\n",nome);
+    scanf("%d",&idade);
+
+    printf("\nMuito bom! O %s tem %d anos\n",nome,idade);
+
+    printf("\nQual o seu sobrenome?\n",sobrenome);
+    scanf("%s",sobrenome);
+
+    printf("\nBonito o seu sobrenome! %s %s\n",nome,sobrenome);
+
+    printf("\nQual seu ano de nascimento?\n");
+    scanf("%d",ano_nascimento);
+
 
     return 0;
 }
