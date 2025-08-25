@@ -3,20 +3,22 @@
 
 int main()
 {
-    int hora_cinema = 20;
-    int hora_atual = 20;
+    int contador = 1;
+    int limite = 10;
 
-    int hora_validada = hora_cinema + 30;
-
-    // if e else — para tomar decisões
-    // if = “Se...”
-    // else = “Se não...”
-    if(hora_atual > hora_validada){
-        printf("Passou do tempo limite! Nao pode entrar");
-    }else if(hora_atual > hora_cinema - 30){
-        printf("Nem abriu a porta do cinema");
-    }else{
-        printf("O horario esta certo! Pode entrar!");
+    // O loop while percorre um bloco de código
+    // desde que uma condição especificada seja true
+    while(contador <= limite){
+        printf("Estamos no primeiro loop!\n");
+        if(contador == 3)
+        {
+            int contador_2 = 5;
+            while(contador_2 > 0){
+                printf("Estamos no segundo loop!\n");
+                contador_2--;
+            }
+        }
+        contador++;
     }
 
     return 0;
