@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h> // Incluir a biblioteca
 
 int main()
 {
-    setlocale(LC_ALL, "Portuguese"); // Configurar para Português
+    // A palavra-chave (int) é um tipo de dado que armazena números inteiros.
+    int ano_nascimento = 2003;
+    int ano_atual = 2025;
 
-    // A função printf() grava uma string formatada no console.
-    printf("Hello world!\n");
-    printf("Olá mundo com acentuação!\n");
+    int resultado = (ano_atual - ano_nascimento);
 
-    // A palavra-chave return finaliza a execução de uma função e pode ser usada para retornar um valor de uma função.
+    // (%d) é um especificador de formato usado com funções de entrada e saída
+    printf("O Paulo tem %d anos",resultado);
+
     return 0;
 }
