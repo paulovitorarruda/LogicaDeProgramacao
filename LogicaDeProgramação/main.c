@@ -3,14 +3,21 @@
 
 int main()
 {
-    // A palavra-chave (int) é um tipo de dado que armazena números inteiros.
-    int ano_nascimento = 2003;
-    int ano_atual = 2025;
+    int hora_cinema = 20;
+    int hora_atual = 20;
 
-    int resultado = (ano_atual - ano_nascimento);
+    int hora_validada = hora_cinema + 30;
 
-    // (%d) é um especificador de formato usado com funções de entrada e saída
-    printf("O Paulo tem %d anos",resultado);
+    // if e else — para tomar decisões
+    // if = “Se...”
+    // else = “Se não...”
+    if(hora_atual > hora_validada){
+        printf("Passou do tempo limite! Nao pode entrar");
+    }else if(hora_atual > hora_cinema - 30){
+        printf("Nem abriu a porta do cinema");
+    }else{
+        printf("O horario esta certo! Pode entrar!");
+    }
 
     return 0;
 }
