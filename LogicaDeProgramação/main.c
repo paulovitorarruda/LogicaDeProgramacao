@@ -3,28 +3,28 @@
 
 int main()
 {
-    // O tipo de dado (char) é usado para armazenar um único caractere.
     char nome[256];
-    char sobrenome[256];
-    int ano_nascimento;
     int idade;
 
-    printf("Qual seu nome?\n");
-    scanf("%s",nome);
+    printf("Ola! Qual seu nome?\n");
+    scanf("%s",&nome);
 
-    printf("\nShow de bola, %s... Qual sua idade?\n",nome);
+    printf("\nQual sua idade?\n",nome);
     scanf("%d",&idade);
 
-    printf("\nMuito bom! O %s tem %d anos\n",nome,idade);
+    printf("Nome: %s\nIdade: %d\n",nome,idade);
 
-    printf("\nQual o seu sobrenome?\n",sobrenome);
-    scanf("%s",sobrenome);
+    printf("\nAguarde enquanto lemos seus dados...");
 
-    printf("\nBonito o seu sobrenome! %s %s\n",nome,sobrenome);
+    printf("a primeira letra do seu nome e: %c",nome[0]);
 
-    printf("\nQual seu ano de nascimento?\n");
-    scanf("%d",ano_nascimento);
-
+    if(idade >= 18){
+        printf("\nVoce e adulto!");
+    }else if(idade >= 12){
+        printf("\nVoce e adolescente!");
+    }else{
+        printf("\nVoce e crianca!");
+    }
 
     return 0;
 }
