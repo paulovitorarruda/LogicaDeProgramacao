@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1756168343 source:c:\users\user\onedrive\desktop\lógicadeprogramação\logicadeprogramacao\logicadeprogramação\main.c
+	<stdio.h>
+	<string.h>
+

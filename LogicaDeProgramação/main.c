@@ -1,29 +1,51 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-int main()
+int main()//PEDRA, PAPEL, TESOURA!
 {
-    char nome[256];
-    int idade;
+    char player1[20], player2[20];
 
-    printf("Ola! Qual seu nome?\n");
-    scanf("%s",&nome);
+    printf("Player 1, escolha (pedra, papel ou tesoura): ");
+    scanf("%s", player1);
 
-    printf("\nQual sua idade?\n",nome);
-    scanf("%d",&idade);
+    printf("Player 2, escolha (pedra, papel ou tesoura): ");
+    scanf("%s", player2);
 
-    printf("Nome: %s\nIdade: %d\n",nome,idade);
-
-    printf("\nAguarde enquanto lemos seus dados...");
-
-    printf("a primeira letra do seu nome e: %c",nome[0]);
-
-    if(idade >= 18){
-        printf("\nVoce e adulto!");
-    }else if(idade >= 12){
-        printf("\nVoce e adolescente!");
-    }else{
-        printf("\nVoce e crianca!");
+    if (strcmp(player1, "papel") == 0) {
+        if (strcmp(player2, "papel") == 0) {
+            printf("Empate!\n");
+        } else if (strcmp(player2, "tesoura") == 0) {
+            printf("Player 2 ganhou, porque tesoura corta papel!\n");
+        } else if (strcmp(player2, "pedra") == 0) {
+            printf("Player 2 perdeu, porque papel embrulha pedra!\n");
+        } else {
+            printf("O Player 2 jogou uma informacao invalida.\n");
+        }
+    }
+    else if (strcmp(player1, "tesoura") == 0) {
+        if (strcmp(player2, "papel") == 0) {
+            printf("Player 2 perdeu, porque tesoura corta papel!\n");
+        } else if (strcmp(player2, "tesoura") == 0) {
+            printf("Empate!\n");
+        } else if (strcmp(player2, "pedra") == 0) {
+            printf("Player 2 ganhou, porque pedra quebra tesoura!\n");
+        } else {
+            printf("O Player 2 jogou uma informacao invalida.\n");
+        }
+    }
+    else if (strcmp(player1, "pedra") == 0) {
+        if (strcmp(player2, "papel") == 0) {
+            printf("Player 2 ganhou, porque papel embrulha pedra!\n");
+        } else if (strcmp(player2, "tesoura") == 0) {
+            printf("Player 2 perdeu, porque pedra quebra tesoura!\n");
+        } else if (strcmp(player2, "pedra") == 0) {
+            printf("Empate!\n");
+        } else {
+            printf("O Player 2 jogou uma informacao invalida.\n");
+        }
+    }
+    else {
+        printf("O Player 1 jogou uma informacao invalida.\n");
     }
 
     return 0;
